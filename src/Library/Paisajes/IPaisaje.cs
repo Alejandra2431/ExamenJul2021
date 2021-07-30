@@ -2,8 +2,7 @@ namespace Library
 {
     public interface IPaisaje
     {
-        int Moneda();
+        int Monedas();
         int CalcularPuntaje(int cant);
-        int AumentarCant(int cantAnterior);
     }
 }

@@ -30,7 +30,6 @@ namespace Library
         public abstract void ActualizarViajero(Viajero viajero);
 
         
-
         
         //cuando es una experiencia con dos lugares el que llega primero va a la
         //posicion 0, y el siguiente a la 1 => se son los últimos 2, se mueve el

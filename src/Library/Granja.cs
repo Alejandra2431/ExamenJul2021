@@ -1,26 +1,27 @@
-/*namespace Library
+namespace Library
 {
     public class Granja: Experiencia
     {
         public bool trabaja;
-        public bool esPaisaje;
         private int monedasXGranja;
         public int GetMonedas()
         {
             return this.monedasXGranja;
-        } // Llamar a este metodo cuando el viajero llega a una experiencia de tipo aguasTermailes para sumarle 3 a moneda
-        public Granja(bool trabaja): base(viajero)
+        }
+        public Granja(bool trabajar, int maxViajeros, Experiencia sigExperiencia): base(maxViajeros, sigExperiencia)
         {
-            this.trabaja= trabaja;
-            this.esPaisaje= false;
+            this.trabaja= trabajar;
             this.monedasXGranja= 3;
         }
-        /*public int OtorgarPuntos(Viajero viajero)
+        public override void ActualizarViajero(Viajero viajero)
         {
-            return viajero.puntosDelViajero = viajero.puntosDelViajero + this.
+            viajero.cantMontañas += 1;
+            viajero.monedasDelViajero += CalcularMonedas(viajero);
         }
-        
-
+        public int CalcularMonedas(Viajero viajero)
+        {
+            viajero.monedasDelViajero += GetMonedas();
+            return viajero.monedasDelViajero;
+        }
     }
 }
-*/

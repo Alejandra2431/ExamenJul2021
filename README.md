@@ -101,3 +101,25 @@ Se deberá entrega un link a un repositorio con la solución, incluyendo todos l
 ## Aclaraciones/Dudas
 
 Se responderán dudas sobre la letra de este ejercicio de exámen por el foro de WebAsignatura.
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------
+
+Solo los paisajes:
+-dan puntos directamente
+-tienen capacidad para dos viajeros
+
+Las experiencias que no son paisajes:
+-dan puntos a través de monedas o bonos
+-tienen capacidad para un solo viajero

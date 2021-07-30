@@ -8,11 +8,13 @@ namespace Library
         public int cantMontañas;
         public int cantOceanos;
         public int puntosDelViajero;
+        public int monedasDelViajero;
         public int posicionEnCamino{get; set;}
-        
         
         public Viajero()
         {
+            //solo son necesarias las cant de paisajes?? pq los
+            //no paisajes no necesitan saber la cantidad?
             cantAguasTermales= 0;
             cantGranjas= 0;
             cantMontañas= 0;

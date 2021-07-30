@@ -3,37 +3,27 @@ namespace Library
 {
     public class Montaña: Experiencia, IPaisaje 
     {
-        private int monedaXMontaña;  //lo saco??? no es necesario, se calcula la cantidad en Viajero
+        private int monedaXMontaña;
         
         public Montaña(int maxViajeros, Experiencia sigExperiencia): base (maxViajeros, sigExperiencia)
         {
             this.monedaXMontaña= 1;
+            this.cantViajeros=2;
+            List<Viajero> viajerosEnMontaña= new List<Viajero>();
         }
-
         public override void ActualizarViajero(Viajero viajero)
         {
             viajero.cantMontañas += 1;
             viajero.puntosDelViajero += CalcularPuntaje(viajero.cantMontañas);
+            viajero.monedasDelViajero += Monedas();
         }
-
-        public int AumentarCant(int cantAnteriorMontañas)
-        {
-            return cantAnteriorMontañas + 1;
-        }
-
-
-        public int Moneda() 
+        public int Monedas() 
         {
           return this.monedaXMontaña;
         }
-
-
         public int CalcularPuntaje(int cantMontañas) 
         {
             return cantMontañas;
-        }
-        
+        }        
     }
 }
-
-    
