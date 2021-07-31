@@ -11,16 +11,18 @@ namespace Library
         public Granja(bool trabajar, int maxViajeros, Experiencia sigExperiencia): base(maxViajeros, sigExperiencia)
         {
             this.trabaja= trabajar;
-            this.monedasXGranja= 3;
+            this.monedasXGranja= 2;
         }
         public override void ActualizarViajero(Viajero viajero)
         {
-            viajero.cantMontañas += 1;
+            viajero.cantGranjas += 1;
             viajero.monedasDelViajero += CalcularMonedas(viajero);
         }
+        //Cada vez que se visita una granja se le suma una cantidad de monedas 
+        //que corresponde a multiplicar la cantidad de visitas a una granja por 2.
         public int CalcularMonedas(Viajero viajero)
         {
-            viajero.monedasDelViajero += GetMonedas();
+            viajero.monedasDelViajero += GetMonedas() * viajero.cantGranjas;
             return viajero.monedasDelViajero;
         }
     }

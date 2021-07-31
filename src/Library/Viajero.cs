@@ -9,6 +9,7 @@ namespace Library
         public int cantOceanos;
         public int puntosDelViajero;
         public int monedasDelViajero;
+        public int bonosDelViajero;
         public int posicionEnCamino{get; set;}
         
         public Viajero()
@@ -20,6 +21,8 @@ namespace Library
             cantMontañas= 0;
             cantOceanos= 0;
             puntosDelViajero= 0;
+            monedasDelViajero= 0;
+            bonosDelViajero= 0;
             posicionEnCamino= 0;
         }
 /*
