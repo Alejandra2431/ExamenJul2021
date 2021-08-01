@@ -18,8 +18,6 @@ namespace Library
             viajero.cantGranjas += 1;
             viajero.monedasDelViajero += CalcularMonedas(viajero);
         }
-        //Cada vez que se visita una granja se le suma una cantidad de monedas 
-        //que corresponde a multiplicar la cantidad de visitas a una granja por 2.
         public int CalcularMonedas(Viajero viajero)
         {
             viajero.monedasDelViajero += GetMonedas() * viajero.cantGranjas;

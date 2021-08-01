@@ -123,3 +123,10 @@ Solo los paisajes:
 Las experiencias que no son paisajes:
 -dan puntos a través de monedas o bonos
 -tienen capacidad para un solo viajero
+
+El bono por pasar por AguasTermales es igual a la cantidad de de visitas a AguasTermales (si esta es par)
+dividido 2, si la cant de visitas es 1 se da 0 bonos, si la cant de 
+visitas es impar se da bonos= a la (cant de visitas menos 1) dividido 2 
+
+Cada vez que se visita una granja se le suma una cantidad de monedas 
+que corresponde a multiplicar la cantidad de visitas a una granja por 2.
