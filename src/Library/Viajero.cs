@@ -30,42 +30,5 @@ namespace Library
         {
 
         }
-
-/*
-
-        private int monedasAPuntos()
-        {
-            if (MonedasDelViajero()<=6)
-            {
-                puntosDelViajero= puntosDelViajero + 2;
-            }
-            else if (MonedasDelViajero() == 9)
-            {
-                puntosDelViajero= puntosDelViajero + 4;
-            }
-            else
-            {
-                puntosDelViajero= puntosDelViajero + 6; 
-            }
-            return puntosDelViajero;
-        }
-
-        private int bonosAPuntos()
-        {
-            if (BonosDelViajero()<=10)
-            {
-                puntosDelViajero= puntosDelViajero + 5;
-            }
-            else if (BonosDelViajero() == 15)
-            {
-                puntosDelViajero= puntosDelViajero + 8;
-            }
-            else
-            {
-                puntosDelViajero= puntosDelViajero + 10; 
-            }
-            return puntosDelViajero;
-        }
-        */
     }
 }
