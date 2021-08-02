@@ -17,8 +17,7 @@ namespace Library
             else
             {
                 proxExperiencia.AgregarViajero(viajero);
-            }
-            
+            } 
         }
         public Experiencia(int cantViajeros, Experiencia experiencia)
         {
@@ -26,7 +25,6 @@ namespace Library
             this.proxExperiencia= experiencia;
             this.viajeros = new List<Viajero>();
         }
-
         public abstract void ActualizarViajero(Viajero viajero);
 
         

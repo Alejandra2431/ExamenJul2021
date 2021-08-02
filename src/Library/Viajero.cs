@@ -25,11 +25,6 @@ namespace Library
             bonosDelViajero= 0;
             posicionEnCamino= 0;
         }
-/*
-        public void GuardarVisitas()
-        {
-            if this.
-        }*/
 
         public void MoverseEnCamino()
         {
@@ -37,16 +32,6 @@ namespace Library
         }
 
 /*
-        public int MonedasDelViajero()
-        {
-            return cantMontañas+cantOceanos+ OBJETOgRANJA.GetMonedas() * cantGranjas; 
-        }
-
-        public int BonosDelViajero()
-        {
-            return cantAguasTermales * OBJETOaGUAS.bonoXAguas;
-        }
-        
 
         private int monedasAPuntos()
         {
