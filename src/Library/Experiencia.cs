@@ -3,27 +3,40 @@ namespace Library
 {
     public abstract class Experiencia
     {
-        private Experiencia proxExperiencia;
-        private List<Viajero> viajeros;
+        public Experiencia proxExperiencia {get; private set;}
+        public List<Viajero> viajeros;
         public int cantViajeros;
-        public void AgregarViajero(Viajero viajero)
+        public int posicionEnCamino;
+        public virtual void AgregarViajero(Viajero viajero)
         {
-            //COUNT EMPIEZA EN 1???
             if (viajeros.Count<this.cantViajeros)
             {
                 viajeros.Add(viajero);
+                viajero.posicionEnCamino =this.posicionEnCamino;
                 this.ActualizarViajero(viajero);
             }
             else
             {
-                proxExperiencia.AgregarViajero(viajero);
+                if (proxExperiencia!= null) 
+                {
+                    proxExperiencia.AgregarViajero(viajero);
+                }
+                else
+                {
+                    //tirar excepcion
+                }
             } 
         }
-        public Experiencia(int cantViajeros, Experiencia experiencia)
+        public void RemoverViajero(Viajero viajero)
+        {
+            this.viajeros.Remove(viajero);
+        }
+        public Experiencia(int cantViajeros, Experiencia experiencia, int posicionEnCamino)
         {
             this.cantViajeros= cantViajeros;
             this.proxExperiencia= experiencia;
-            this.viajeros = new List<Viajero>();
+            this.viajeros= new List<Viajero>();
+            this.posicionEnCamino= posicionEnCamino; 
         }
         public abstract void ActualizarViajero(Viajero viajero);
 

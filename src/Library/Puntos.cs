@@ -24,13 +24,13 @@ namespace Library
             }
             return viajero.puntosDelViajero;
         }
-        private int bonosAPuntos(Viajeros viajero)
+        private int bonosAPuntos(Viajero viajero)
         {
-            if (viajero.BonosDelViajero<=10)
+            if (viajero.bonosDelViajero<=10)
             {
                 viajero.puntosDelViajero+= 5;
             }
-            else if (viajero.BonosDelViajero == 15)
+            else if (viajero.bonosDelViajero == 15)
             {
                 viajero.puntosDelViajero+= 8;
             }

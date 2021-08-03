@@ -8,7 +8,7 @@ namespace Library
             return this.bonoXAguas;
         }
         
-        public AguasTermales(int maxViajeros, Experiencia sigExperiencia): base(maxViajeros, sigExperiencia)
+        public AguasTermales(int maxViajeros, Experiencia sigExperiencia, int posicionEnCamino): base(maxViajeros, sigExperiencia, posicionEnCamino)
         {
         }
         public override void ActualizarViajero(Viajero viajero)

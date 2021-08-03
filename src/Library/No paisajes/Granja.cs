@@ -4,7 +4,7 @@ namespace Library
     {
         public bool trabaja;
         private int aumentarMonedas;
-        public Granja(bool trabajar, int maxViajeros, Experiencia sigExperiencia): base(maxViajeros, sigExperiencia)
+        public Granja(bool trabajar, int maxViajeros, Experiencia sigExperiencia, int posicionEnCamino): base(maxViajeros, sigExperiencia, posicionEnCamino)
         {
             this.trabaja= trabajar;
             this.aumentarMonedas= 2;

@@ -10,7 +10,8 @@ namespace Library
         public int puntosDelViajero;
         public int monedasDelViajero;
         public int bonosDelViajero;
-        public int posicionEnCamino{get; set;}
+        public int posicionEnCamino;
+        public bool viajeroEnFin;
         
         public Viajero()
         {

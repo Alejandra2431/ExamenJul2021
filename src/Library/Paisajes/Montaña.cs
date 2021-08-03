@@ -5,7 +5,7 @@ namespace Library
     {
         private int monedaXMontaña;
         
-        public Montaña(int maxViajeros, Experiencia sigExperiencia): base (maxViajeros, sigExperiencia)
+        public Montaña(int maxViajeros, Experiencia sigExperiencia, int posicionEnCamino): base (maxViajeros, sigExperiencia, posicionEnCamino)
         {
             this.monedaXMontaña= 1;
             this.cantViajeros=2;
