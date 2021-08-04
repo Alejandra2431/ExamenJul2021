@@ -51,7 +51,7 @@ namespace Library
         }
         else 
         {
-          //excepcion no se encontró comienzo
+          throw new NoIniciaElJuegoExcepcion("No se encontró la Experiencia Comienzo");
         }
       }
       
@@ -80,7 +80,10 @@ namespace Library
       }
       public void Jugar()
       {
-        //excepcion si 
+        if (viajeros==null)
+        {
+          throw new NoIniciaElJuegoExcepcion("Lista de viajeros vacía");
+        }
         bool juegoTerminado= false;
         while (!juegoTerminado)
         {
@@ -88,7 +91,6 @@ namespace Library
           MoverViajero(moverAlViajero);
           juegoTerminado=JuegoFinalizado(viajeros);
         }
-
       }
       private bool JuegoFinalizado(List<Viajero> viajeros)
       {

@@ -23,7 +23,7 @@ namespace Library
                 }
                 else
                 {
-                    //tirar excepcion
+                    throw new AgregarViajeroExcepcion("No hay próxima experiencia, el viajero llegó al final");
                 }
             } 
         }

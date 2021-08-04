@@ -19,7 +19,7 @@ namespace Library
             }
             else
             {
-                //tirar excepcion de que se llegó al máximo de jugadores
+                throw new AgregarViajeroExcepcion("Se agregó la máxima cantidad de viajeros posible");
             }
         }
     }
