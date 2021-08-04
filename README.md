@@ -131,4 +131,4 @@ visitas es impar se da bonos= a la (cant de visitas menos 1) dividido 2
 Cada vez que se visita una granja se le suma una cantidad de monedas 
 que corresponde a multiplicar la cantidad de visitas a una granja por 2.
 
-Los viajeros se mueven de experiencia en experiencia (de en una a una posición)
+Los viajeros se mueven a una posicion dada randómicamente entre las siguientes 7 experiencias.

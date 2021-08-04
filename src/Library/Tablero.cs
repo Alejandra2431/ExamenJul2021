@@ -54,56 +54,54 @@ namespace Library
           //excepcion no se encontró comienzo
         }
       }
+      
+      public Viajero viajeroAMover(List<Viajero> viajeros) 
+      {
+        Viajero viajeroAMover = null;
+        foreach (Viajero viajero in viajeros)
+        {
+            if (viajero.viajeroEnFin)
+            {
+                continue;
+            }
+            if (viajeroAMover== null)
+            {
+              viajeroAMover= viajero;
+            }
+            else
+            {
+              if (viajero.posicionEnCamino<=viajeroAMover.posicionEnCamino)
+              {
+                  viajeroAMover= viajero;
+              }
+            }
+        }
+        return viajeroAMover;
+      }
       public void Jugar()
       {
-        bool juegoTerminado= true;
-        if (viajeros != null)
+        //excepcion si 
+        bool juegoTerminado= false;
+        while (!juegoTerminado)
         {
-          foreach (Viajero viajero in viajeros)
+          Viajero moverAlViajero= viajeroAMover(viajeros);
+          MoverViajero(moverAlViajero);
+          juegoTerminado=JuegoFinalizado(viajeros);
+        }
+
+      }
+      private bool JuegoFinalizado(List<Viajero> viajeros)
+      {
+        bool juegoFinalizado=true;
+        foreach (Viajero viajero in viajeros)
+        {
+          if (!viajero.viajeroEnFin)
           {
-              if (viajero.viajeroEnFin == false)
-              {
-                juegoTerminado = false;
-              }
-          }
-          if (!juegoTerminado)
-          {
-            Viajero viajeroAMover = viajeros[0];
-            foreach (Viajero viajero in viajeros)
-            {
-              if (viajero.posicionEnCamino < viajeroAMover.posicionEnCamino)
-              {
-                viajeroAMover= viajero; 
-              }
-              else if (viajero.posicionEnCamino == viajeroAMover.posicionEnCamino)
-              {
-                //mover el que llegó primero a la experiencia 
-              }
-              MoverViajero(viajeroAMover);
-            }
-            foreach (Viajero viajero in viajeros)
-            {
-                MoverViajero(viajero);
-            }
-          }
-          else 
-          {
-            foreach (Viajero viajero in viajeros)
-            {
-              //calcular puntos fianles de los viajeros con la clase Puntos
-            }
+            juegoFinalizado=false;
+            break;
           }
         }
-        else
-        {
-          //EXCEPCIÓN??
-        }
+        return juegoFinalizado;
       }
     }
 }
-
-
-/*  foreach (Viajero viajero in viajeros)
-      {
-         MoverViajero(viajero);
-      }*/

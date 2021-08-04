@@ -8,7 +8,7 @@ namespace Library
 
         }
 
-        private int monedasAPuntos(Viajero viajero)
+        public int monedasAPuntos(Viajero viajero)
         {
             if (viajero.monedasDelViajero<=6)
             {
@@ -24,7 +24,7 @@ namespace Library
             }
             return viajero.puntosDelViajero;
         }
-        private int bonosAPuntos(Viajero viajero)
+        public int bonosAPuntos(Viajero viajero)
         {
             if (viajero.bonosDelViajero<=10)
             {

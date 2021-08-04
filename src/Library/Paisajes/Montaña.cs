@@ -9,7 +9,6 @@ namespace Library
         {
             this.monedaXMontaña= 1;
             this.cantViajeros=2;
-            List<Viajero> viajerosEnMontaña= new List<Viajero>();
         }
         public override void ActualizarViajero(Viajero viajero)
         {

@@ -10,12 +10,23 @@ namespace Library
        }
        public override void ActualizarViajero(Viajero viajero) 
        {
-           viajero.viajeroEnFin= true;
-           Puntos puntos = new Puntos();
-           foreach (Viajero viaj in viajerosEnFinal)
-           {
-            
-           }
+            viajero.viajeroEnFin= true;
+            Puntos puntos = new Puntos();
+            viajero.puntosDelViajero= puntos.monedasAPuntos(viajero);
+            viajero.puntosDelViajero=puntos.bonosAPuntos(viajero);
+       }
+       public override void AgregarViajero(Viajero viajero)
+       {
+           
+            if (this.viajeros.Count<this.cantViajeros)
+            {
+                this.viajeros.Add(viajero);
+                this.ActualizarViajero(viajero);
+            }
+            else
+            {
+                //tirar excepcion de que se llegó al máximo de jugadores
+            }
        }
     }
 }
