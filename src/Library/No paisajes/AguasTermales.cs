@@ -1,21 +1,40 @@
 namespace Library
 {
+    /// <summary>
+    /// AguasTermales representa la experiencia- no paisaje: AguasTermales
+    /// </summary>
     public class AguasTermales: Experiencia
     {
+        /// <summary>
+        /// Bono por visitar AguasTermales
+        /// </summary>
+        /// <value>int</value>
         public int bonoXAguas;
+        /// <summary>
+        /// Devuleve el bono por visitar AguasTermales
+        /// </summary>
+        /// <returns>int</returns>
         public int GetBono()
         {
             return this.bonoXAguas;
         }
-        
         public AguasTermales(int maxViajeros, Experiencia sigExperiencia, int posicionEnCamino): base(maxViajeros, sigExperiencia, posicionEnCamino)
         {
         }
+        /// <summary>
+        /// Actualiza la información del viajero
+        /// </summary>
+        /// <param name="viajero"></param>
         public override void ActualizarViajero(Viajero viajero)
         {
             viajero.cantAguasTermales += 1;
             viajero.bonosDelViajero += CalcularBonos(viajero);
         } 
+        /// <summary>
+        /// Calcula los bonos que le corresponden al viajero por la visita a AguasTermales
+        /// </summary>
+        /// <param name="viajero"></param>
+        /// <returns>int</returns>
         public int CalcularBonos(Viajero viajero)
         {
             bonoXAguas= 0;

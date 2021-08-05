@@ -2,7 +2,7 @@ using System;
 namespace Library
 {
     /// <summary>
-    /// Representa un error en el estado del juego
+    /// Representa un error al iniciar el juego
     /// </summary>
     public class NoIniciaElJuegoExcepcion : Exception
     {

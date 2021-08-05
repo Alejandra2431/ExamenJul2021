@@ -33,7 +33,7 @@ namespace Library
             this.posicionEnCamino= posicionEnCamino; 
         }
         /// <summary>
-        /// Agrega un viajero a la experiencia si esta todavía tiene lugar disponible
+        /// Agrega un viajero a la experiencia si se cumple la condición
         /// </summary>
         /// <param name="viajero"></param>
         public virtual void AgregarViajero(Viajero viajero)
@@ -64,6 +64,10 @@ namespace Library
         {
             this.viajeros.Remove(viajero);
         }
+        /// <summary>
+        /// Actualiza la información del viajero
+        /// </summary>
+        /// <param name="viajero"></param>
         public abstract void ActualizarViajero(Viajero viajero);
 
         

@@ -55,7 +55,7 @@ namespace Library
         }
       }
       /// <summary>
-      /// Agrega viajeros a la primera experiencia, el comienzo
+      /// Agrega viajeros a la primera experiencia, el comienzo, si se cumple la condición
       /// </summary>
       /// <param name="viajeros"></param>
       /// <param name="comienzo"></param>

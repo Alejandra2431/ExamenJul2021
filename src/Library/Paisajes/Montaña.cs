@@ -17,8 +17,9 @@ namespace Library
             this.cantViajeros=2;
         }
         /// <summary>
-        /// Actualizar la información del viajero
+        /// Actualiza la información del viajero
         /// </summary>
+        /// <param name="viajero"></param>
         public override void ActualizarViajero(Viajero viajero)
         {
             viajero.cantMontañas += 1;
