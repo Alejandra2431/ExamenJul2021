@@ -1,12 +1,41 @@
 using System.Collections.Generic;
 namespace Library
 {
+    /// <summary>
+    /// Representa la abstraccion de una experiencia
+    /// </summary>
     public abstract class Experiencia
     {
+        /// <summary>
+        /// Próxima experiencia a la que va el viajero a moverse
+        /// </summary>
         public Experiencia proxExperiencia {get; private set;}
+        /// <summary>
+        /// Lista de viajeros
+        /// </summary>
+        /// <value>List<Viajero></value>
         public List<Viajero> viajeros;
+        /// <summary>
+        /// Cantidad de Viajeros
+        /// </summary>
+        /// <value>int</value>
         public int cantViajeros;
+        /// <summary>
+        /// Posición del viajero en el camino
+        /// </summary>
+        /// <value>int</value>
         public int posicionEnCamino;
+        public Experiencia(int cantViajeros, Experiencia experiencia, int posicionEnCamino)
+        {
+            this.cantViajeros= cantViajeros;
+            this.proxExperiencia= experiencia;
+            this.viajeros= new List<Viajero>();
+            this.posicionEnCamino= posicionEnCamino; 
+        }
+        /// <summary>
+        /// Agrega un viajero a la experiencia si esta todavía tiene lugar disponible
+        /// </summary>
+        /// <param name="viajero"></param>
         public virtual void AgregarViajero(Viajero viajero)
         {
             if (viajeros.Count<this.cantViajeros)
@@ -27,16 +56,13 @@ namespace Library
                 }
             } 
         }
+        /// <summary>
+        /// Quita de la experiencia al viajero que se mueve a otra experiencia
+        /// </summary>
+        /// <param name="viajero"></param>
         public void RemoverViajero(Viajero viajero)
         {
             this.viajeros.Remove(viajero);
-        }
-        public Experiencia(int cantViajeros, Experiencia experiencia, int posicionEnCamino)
-        {
-            this.cantViajeros= cantViajeros;
-            this.proxExperiencia= experiencia;
-            this.viajeros= new List<Viajero>();
-            this.posicionEnCamino= posicionEnCamino; 
         }
         public abstract void ActualizarViajero(Viajero viajero);
 

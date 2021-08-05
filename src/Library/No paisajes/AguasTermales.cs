@@ -13,7 +13,7 @@ namespace Library
         }
         public override void ActualizarViajero(Viajero viajero)
         {
-            viajero.cantGranjas += 1;
+            viajero.cantAguasTermales += 1;
             viajero.bonosDelViajero += CalcularBonos(viajero);
         } 
         public int CalcularBonos(Viajero viajero)

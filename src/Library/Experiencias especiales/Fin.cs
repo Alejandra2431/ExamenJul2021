@@ -4,6 +4,7 @@ namespace Library
     public class Fin: Experiencia
     {
        private List<Viajero> viajerosEnFinal;
+       private Puntos puntos;
        public Fin(int maxViajeros, Experiencia sigExperiencia, int posicionEnCamino): base (maxViajeros, sigExperiencia, posicionEnCamino)
        {
            List<Viajero> viajerosEnFinal= new List<Viajero>();
