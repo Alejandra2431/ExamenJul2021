@@ -1,23 +1,39 @@
+using System.Collections.Generic;
+using NUnit.Framework;
+using System;
+
 namespace Library.Tests
-{
+{   /*
+        Este test es para todas las experiencias excepto para
+        Comienzo y Fin
+    */
     public class ExperienciaTest
     {
-        private Viajero viajero1;
-        private Viajero viajero2;
-        private Viajero viajero3;
-        private List<Viajero> viajeros;
+   
         [SetUp]
         public void SetUp()
         {
-            viajero1 = new Viajero();
-            viajero2 = new Viajero();
-            viajero3 = new Viajero();
-            viajeros = new List<Viajeros>();
-            viajeros.Add(viajero1);
         }
         [Test]
         public void AgregarViajero()
         {
+
+            AgregarViajeroExcepcion error1= Assert.Throws<AgregarViajeroExcepcion>(new TestDelegate(AgregarViajeroTest1));                  
+            Assert.That( error1.Message, Is.EqualTo("No hay próxima experiencia, el viajero llegó al final") );
+        }
+        public void AgregarViajeroTest1()
+        {
+            Viajero viajero1 = new Viajero();
+            Viajero viajero2 = new Viajero();
+            Montaña montaña = new Montaña(1, null, 1);
+            montaña.AgregarViajero(viajero1);
+            montaña.AgregarViajero(viajero2);
+
+        }
+        [Test]
+        public void RemoverViajero()
+        {
+
         }
     }
 }

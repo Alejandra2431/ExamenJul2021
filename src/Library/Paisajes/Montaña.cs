@@ -14,7 +14,6 @@ namespace Library
         public Montaña(int maxViajeros, Experiencia sigExperiencia, int posicionEnCamino): base (maxViajeros, sigExperiencia, posicionEnCamino)
         {
             this.monedaXMontaña= 1;
-            this.cantViajeros=2;
         }
         /// <summary>
         /// Actualiza la información del viajero

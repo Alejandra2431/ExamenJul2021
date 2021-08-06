@@ -3,7 +3,9 @@ using System;
 namespace Library
 {
     /// <summary>
-    /// Tablero representa el camino/tablero
+    /// Tablero representa el camino/tablero. 
+    /// El camino está compuesto por experiencias, tablero recive
+    /// un comienzo, este está compuesto por otra experiencia y así sucesivamente
     /// </summary>
     public class Tablero
     {

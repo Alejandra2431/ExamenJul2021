@@ -14,7 +14,6 @@ namespace Library
         public Oceano(int maxViajeros, Experiencia sigExperiencia, int posicionEnCamino): base (maxViajeros, sigExperiencia, posicionEnCamino)
         {
             this.monedaXOceano= 1;
-            this.cantViajeros=2;
         }
         /// <summary>
         /// Actualiza la información del viajero
