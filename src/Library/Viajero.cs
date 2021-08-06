@@ -61,8 +61,5 @@ namespace Library
             bonosDelViajero= 0;
             posicionEnCamino= 0;
         }
-        public void MoverseEnCamino()
-        {
-        }
     }
 }

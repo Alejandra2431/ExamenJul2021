@@ -30,7 +30,11 @@ namespace Library
             this.cantViajeros= cantViajeros;
             this.proxExperiencia= experiencia;
             this.viajeros= new List<Viajero>();
-            this.posicionEnCamino= posicionEnCamino; 
+            this.posicionEnCamino= posicionEnCamino;
+            if (posicionEnCamino<=0)
+            {
+                throw new NoIniciaElJuegoExcepcion("La posición no puede ser negativa o cero");
+            } 
         }
         /// <summary>
         /// Agrega un viajero a la experiencia si se cumple la condición
