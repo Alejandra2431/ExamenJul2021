@@ -34,7 +34,7 @@ namespace Library
             return this.monedaXOceano;
         }
         /// <summary>
-        /// Retorna los puntos que se le suman la viajero por visitar la experiencia Oceano
+        /// Retorna los puntos que se le suman al viajero por visitar la experiencia Oceano
         /// </summary>
         /// <param name="cantOceanos"></param>
         /// <returns>int</returns>

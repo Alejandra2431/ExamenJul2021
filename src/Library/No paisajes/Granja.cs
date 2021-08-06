@@ -10,7 +10,7 @@ namespace Library
         /// </summary>
         /// <value>int</value>
         private int aumentarMonedas;
-        public Granja(bool trabajar, int maxViajeros, Experiencia sigExperiencia, int posicionEnCamino): base(maxViajeros, sigExperiencia, posicionEnCamino)
+        public Granja(int maxViajeros, Experiencia sigExperiencia, int posicionEnCamino): base(maxViajeros, sigExperiencia, posicionEnCamino)
         {
             this.aumentarMonedas= 2;
         }
@@ -21,7 +21,7 @@ namespace Library
         public override void ActualizarViajero(Viajero viajero)
         {
             viajero.cantGranjas += 1;
-            viajero.monedasDelViajero += CalcularMonedas(viajero);
+            viajero.monedasDelViajero = CalcularMonedas(viajero);
         }
         //Por cada visita a una granja se le da en monedas, el doble de la cantidad de visitas
         /// <summary>
