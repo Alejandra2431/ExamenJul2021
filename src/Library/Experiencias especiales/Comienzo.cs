@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 namespace Library
 {
+    /*
+        Se aplica el patron Singleton ya que se crea una única vez la instancia de Comienzo. 
+    */
     /// <summary>
     /// Representa la primera experiencia del juego
     /// </summary>

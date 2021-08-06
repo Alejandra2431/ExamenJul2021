@@ -2,6 +2,11 @@ using System.Collections.Generic;
 using System;
 namespace Library
 {
+    /*
+      La clase Tablero es experta en conocer la informacion necesaria para llevar a cabo el juego, conoce tanto a 
+      la experiencia Comienzo como a Viajero, esenciales para completar sus responsabilidades. Por eso cumple con el patron Expert.
+
+    */
     /// <summary>
     /// Tablero representa el camino/tablero. 
     /// El camino está compuesto por experiencias, tablero recive
@@ -9,6 +14,7 @@ namespace Library
     /// </summary>
     public class Tablero
     {
+      /// Instancia unica del Singleton Comienzo
       /// <summary>
       /// Primera experiencia del juego
       /// </summary>

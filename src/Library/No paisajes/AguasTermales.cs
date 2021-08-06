@@ -1,5 +1,9 @@
 namespace Library
 {
+    /*
+        Se aplica el patron expert en esta clase ya que es la experta en los datos de las aguas termales y en cómo hacer los cálculos de ellas.
+
+    */
     /// <summary>
     /// AguasTermales representa la experiencia- no paisaje: AguasTermales
     /// </summary>

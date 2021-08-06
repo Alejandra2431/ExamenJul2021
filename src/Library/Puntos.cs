@@ -1,6 +1,10 @@
 
 namespace Library
 {
+    /*
+        Puntos cumple con SRP porque su única funcionalidad es calcular la equivalencia de un valor X (monedas o bonos)
+        a puntos. 
+    */
     /// <summary>
     /// Representa el cálculo del los puntos totales
     /// </summary>

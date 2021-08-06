@@ -1,5 +1,9 @@
 namespace Library
 {
+    /*
+        Se aplica el patron expert en esta clase ya que es la experta en los datos de las granjas y cómo hacer los cálculos de ellas.
+        
+    */
     /// <summary>
     /// Granja representa la experiencia- no paisaje: Granja
     /// </summary>

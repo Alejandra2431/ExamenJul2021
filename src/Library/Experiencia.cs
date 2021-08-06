@@ -7,6 +7,9 @@ namespace Library
         (Ejemplo Volcán) y utilizar esta clase solo es necesario crearla y que ella implemente 
         esta clase abstracta.
 
+        Experiencia permite cumplir con el principio OCP (Open-Closed Principle), así se puede extender el código a traves de
+        la implementación de ella, en el caso de que se quieran agregar más paisajes/no paisajes.
+
         Permite aplicar el principio DIP (Dependency inversion principle) debido a que es una abstraccion
         y las experiencias van a depender de ella y no de una clase directamente.
     */
