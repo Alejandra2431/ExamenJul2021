@@ -16,7 +16,6 @@ namespace Library.Tests
         [Test]
         public void AgregarViajero()
         {
-
             AgregarViajeroExcepcion error1= Assert.Throws<AgregarViajeroExcepcion>(new TestDelegate(AgregarViajeroTest1));                  
             Assert.That( error1.Message, Is.EqualTo("No hay próxima experiencia, el viajero llegó al final") );
         }

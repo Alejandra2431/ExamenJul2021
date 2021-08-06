@@ -16,45 +16,45 @@ namespace Library.Tests
         }
 
         [Test]
-        public void monedasAPuntos1()
+        public void MonedasAPuntos1()
         {
             viajero.monedasDelViajero=5;
-            puntos.monedasAPuntos(viajero);
+            puntos.MonedasAPuntos(viajero);
             Assert.AreEqual(viajero.puntosDelViajero, 2);
         }
         [Test]
-        public void monedasAPuntos2()
+        public void MonedasAPuntos2()
         {
             viajero.monedasDelViajero=9;
-            puntos.monedasAPuntos(viajero);
+            puntos.MonedasAPuntos(viajero);
             Assert.AreEqual(viajero.puntosDelViajero, 4);
         }
         [Test]
-        public void monedasAPuntos3()
+        public void MonedasAPuntos3()
         {
             viajero.monedasDelViajero=7;
-            puntos.monedasAPuntos(viajero);
+            puntos.MonedasAPuntos(viajero);
             Assert.AreEqual(viajero.puntosDelViajero, 6);
         }
         [Test]
-        public void bonosAPuntos1()
+        public void BonosAPuntos1()
         {
             viajero.bonosDelViajero=1;
-            puntos.bonosAPuntos(viajero);
+            puntos.BonosAPuntos(viajero);
             Assert.AreEqual(viajero.puntosDelViajero, 5);
         }
         [Test]
-        public void bonosAPuntos2()
+        public void BonosAPuntos2()
         {
             viajero.bonosDelViajero=3;
-            puntos.bonosAPuntos(viajero);
+            puntos.BonosAPuntos(viajero);
             Assert.AreEqual(viajero.puntosDelViajero, 8);
         }
         [Test]
-        public void bonosAPuntos3()
+        public void BonosAPuntos3()
         {
             viajero.bonosDelViajero=6;
-            puntos.bonosAPuntos(viajero);
+            puntos.BonosAPuntos(viajero);
             Assert.AreEqual(viajero.puntosDelViajero, 10);
         }
     }
