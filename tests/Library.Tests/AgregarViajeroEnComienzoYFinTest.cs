@@ -11,26 +11,29 @@ namespace Library.Tests
         {
         }
         [Test]
-        public void AgregarViajero()
+        public void AgregarViajeroTest()
         {
-            AgregarViajeroExcepcion error= Assert.Throws<AgregarViajeroExcepcion>(new TestDelegate(AgregarViajeroTest2));                  
-            Assert.That(error.Message, Is.EqualTo("Se agregó la máxima cantidad de viajeros posible"));
+            AgregarViajeroExcepcion errorFin= Assert.Throws<AgregarViajeroExcepcion>(new TestDelegate(AgregarViajeroFinTest));                  
+            Assert.That(errorFin.Message, Is.EqualTo("Se agregó la máxima cantidad de viajeros posible"));
 
-            AgregarViajeroExcepcion error2= Assert.Throws<AgregarViajeroExcepcion>(new TestDelegate(AgregarViajeroTest3));                  
-            Assert.That(error2.Message, Is.EqualTo("No hay próxima experiencia, el viajero llegó al final"));
+            AgregarViajeroExcepcion errorComienzo= Assert.Throws<AgregarViajeroExcepcion>(new TestDelegate(AgregarViajeroComienzoTest));                  
+            Assert.That(errorComienzo.Message, Is.EqualTo("Se agregó la máxima cantidad de viajeros posible"));
         }
-        private void AgregarViajeroTest2()
+        private void AgregarViajeroFinTest()
         {
             Viajero viajero1 = new Viajero();
             Viajero viajero2 = new Viajero();
-
-            Fin fin = new Fin(2, null, 1);
+            Fin fin = new Fin(1, null, 1);
             fin.AgregarViajero(viajero1);
             fin.AgregarViajero(viajero2);
         }
-        private void AgregarViajeroTest3()
+        private void AgregarViajeroComienzoTest()
         {
-            Fin fin = new Fin(2, null, 1);
+            Viajero viajero1 = new Viajero();
+            Viajero viajero2 = new Viajero();
+            Comienzo comienzo = new Comienzo(1, null, 1);
+            comienzo.AgregarViajero(viajero1);
+            comienzo.AgregarViajero(viajero2);
         }
     }
 }

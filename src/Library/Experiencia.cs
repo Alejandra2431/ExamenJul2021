@@ -1,6 +1,15 @@
 using System.Collections.Generic;
 namespace Library
 {
+    /*
+        En esta clase se aplica el patron polimorfismo, el programa es capaz de utilizar diferentes 
+        experiencias que implementen esta clase abstracta Experiencia. Si se decide crear otro paisaje/no paisaje
+        (Ejemplo Volcán) y utilizar esta clase solo es necesario crearla y que ella implemente 
+        esta clase abstracta.
+
+        Permite aplicar el principio DIP (Dependency inversion principle) debido a que es una abstraccion
+        y las experiencias van a depender de ella y no de una clase directamente.
+    */
     /// <summary>
     /// Representa la abstraccion de una experiencia
     /// </summary>

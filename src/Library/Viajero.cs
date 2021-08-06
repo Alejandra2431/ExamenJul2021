@@ -1,5 +1,8 @@
 namespace Library
 {
+    /*
+        Viajero cumple con el patrón Expert, sabe toda la información con respecto a cada viajero.
+    */
     /// <summary>
     /// Representa a los viajeros en el juego
     /// </summary>
