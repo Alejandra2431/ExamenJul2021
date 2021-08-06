@@ -7,7 +7,7 @@ namespace Library
     public class Oceano: Experiencia, IPaisaje
     {
         /// <summary>
-        /// Monedas a otorgar por visitar un oceano
+        /// Monedas a otorgar por visitar un Oceano
         /// </summary>
         /// <value>int</value>
         private int monedaXOceano;

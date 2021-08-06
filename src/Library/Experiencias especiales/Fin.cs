@@ -6,10 +6,6 @@ namespace Library
     /// </summary>
     public class Fin: Experiencia
     {   
-        /// <summary>
-        /// Lista de viajeros
-        /// </summary>
-        /// <value>List<Viajero></value>
         public Fin(int maxViajeros, Experiencia sigExperiencia, int posicionEnCamino): base (maxViajeros, sigExperiencia, posicionEnCamino)
         {
         }
@@ -21,8 +17,8 @@ namespace Library
         {
             viajero.viajeroEnFin= true;
             Puntos puntos = new Puntos();
-            viajero.puntosDelViajero+= puntos.monedasAPuntos(viajero);
-            viajero.puntosDelViajero+=puntos.bonosAPuntos(viajero);
+            viajero.puntosDelViajero+= puntos.MonedasAPuntos(viajero);
+            viajero.puntosDelViajero+=puntos.BonosAPuntos(viajero);
         }
         /// <summary>
         /// Agrega viajero a la experiencia Fin si se cumple la condición

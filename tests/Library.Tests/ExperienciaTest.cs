@@ -4,8 +4,7 @@ using System;
 
 namespace Library.Tests
 {   /*
-        Este test es para todas las experiencias excepto para
-        Comienzo y Fin
+        Test para todas las experiencias excepto para Comienzo y Fin
     */
     public class ExperienciaTest
     {
@@ -28,12 +27,6 @@ namespace Library.Tests
             Montaña montaña = new Montaña(1, null, 1);
             montaña.AgregarViajero(viajero1);
             montaña.AgregarViajero(viajero2);
-
-        }
-        [Test]
-        public void RemoverViajero()
-        {
-
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Library
         /// Calcula la cantidad de puntos que le corresponden al viajero según cuántas monedas obtuvo
         /// </summary>
         /// <param name="viajero"></param>
-        public int monedasAPuntos(Viajero viajero)
+        public int MonedasAPuntos(Viajero viajero)
         {
             if (viajero.monedasDelViajero<=6)
             {
@@ -34,7 +34,7 @@ namespace Library
         /// Calcula la cantidad de puntos que le corresponden al viajero según cuántos bonos obtuvo
         /// </summary>
         /// <param name="viajero"></param>
-        public int bonosAPuntos(Viajero viajero)
+        public int BonosAPuntos(Viajero viajero)
         {
             if (viajero.bonosDelViajero<=2)
             {

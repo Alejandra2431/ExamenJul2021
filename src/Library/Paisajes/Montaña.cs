@@ -7,7 +7,7 @@ namespace Library
     public class Montaña: Experiencia, IPaisaje 
     {
         /// <summary>
-        /// Monedas a otorgar por visitar una montaña
+        /// Monedas a otorgar por visitar una Montaña
         /// </summary>
         /// <value>int</value>
         private int monedaXMontaña;
