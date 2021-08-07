@@ -12,61 +12,12 @@
 
 _Tokaido_ es, además de una ruta en Japón, un juego de mesa muy popular creado por Antoine Bauza. En el juego, viajeros de distintos orígenes atravisan el camino de Edo a Kyoto participando de diversas experiencias en el afán de enriqueser su viaje lo más posible.
 
-## Desafío
-
-El desafío de este ejercicio es modelar una versión simplificada del juego _Tokaido_ en C# aplicando los principios y patrones vistos en el curso y presentados en la bibliografía.
-
-### Objetivo del juego original
-
-El objetivo del juego es realizar la mayor cantidad de experiencias posibles, consiguiendo así la mayor cantidad de puntos. El juego termina cuando todos los viajeros se encuentran en la última experiencia. El viajero con más puntos es el ganador.
-
-### Viajeros
-
-Los viajeros son los personajes del juego, que recorrerán el camino deteniendose en las distintas experiencias.
-
-Cada viajero acumula _puntos_ y _monedas_. Al final del juego, el viajero con más puntos es el ganador.
-
-### El camino
-
-_Tokaido_ presenta a lo largo de su recorrido diferentes "estaciones" que permiten realizar experiencias diversas. Cada experiencia le dará al viajero que la realice una determinada cantidad de puntos que se irán acumulando hasta el final del juego. 
-
-Los viajeros siempre deben moverse hacia adelante en el camino. Es decir, no se pueden visitar experiencias que estén _antes_ de la posición actual del viajero.
-
-A continuación se presentan las experiencias (en versión simplificada) que un viajero puede realizar en _Tokaido_.
-
-#### Granja
-
-Un viajero puede visitar una granja, donde trabajará y obtendrá 3 monedas.
-
-#### Aguas termales
-
-Un viajero puede detenerse en una estación de aguas termales para obtener 2 puntos.
-
-#### Paisajes
-
-Existen 2 tipos de paisajes que un viajero puede visitar: montaña y océano. Cuando un viajero visita un paisaje de tipo montaña, el viajero obtiene 1 punto. La siguiente vez que visita un paisaje de Motaña, el viajero obtendrá 2 puntos. Cada vez que visite un nuevo paisaje de montaña obtendrá 1 punto más que la vez anterior. 
-
-Por ejemplo, si un viajero visita 4 paisajes de montaña obtendrá 10 puntos (1 + 2 + 3 + 4).
-
-Con los océanos ocurre algo similar, sólo que los puntos ascienden de 2 en 2. Si un viajero visita 3 paisajes de océano, obtendrá 9 puntos (1 + 3 + 5).
-
-### Disponibilidad
-
-Cada experiencia tiene una cantidad máxima de viajeros que pueden visitarlas. Por ejemplo, un sitio de aguas termales podría tener una restricción de 2 viajeros como máximo. Si 2 viajeros estan presentes en dicho sitio, no es posible que otro viajero realice dicha experiencia.
-
 ## Referencia gráfica
 
 La siguiente imágen ilustra la versión simplificada del juego descrito.
 
 ![Referencia](./Assets/Reference.png)
 
-
-## Referencia de Juego
-[Como jugar Tokaido - Youtube](https://www.youtube.com/watch?v=LZU2hBid7KI)
-
-## Extensibilidad
-
-Se ha presentado una versión simplificada del juego. En el futuro, debe ser posible incorportar los elementos restantes que han sido dejados fuera del alcance. Se destaca en particular nuevos sitios (con formulas de puntos y monedas diferentes) y viajeros que obtienen puntos o monedas extras por visitar determinados lugares (bonos).
 
 # Entregables
 
@@ -98,37 +49,33 @@ Fecha límite: Miércoles 04 de Agosto a las 23:59. No se aceptarán entregas fu
 
 Se deberá entrega un link a un repositorio con la solución, incluyendo todos los entregables mencionados. El repositorio debe tener acceso público.
 
-## Aclaraciones/Dudas
-
-Se responderán dudas sobre la letra de este ejercicio de exámen por el foro de WebAsignatura.
-
+--------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
 
 
 
-
-
-
-
-
-
-
-
-
-----------------------------------------------------------------
+## ACLARACIONES Y COMENTARIOS SOBRE EL FUNCIONAMIENTO
 
 Solo los paisajes:
--dan puntos directamente
--tienen capacidad para dos viajeros
+-Dan puntos directamente
+-Tienen capacidad para dos viajeros
 
 Las experiencias que no son paisajes:
--dan puntos a través de monedas o bonos
--tienen capacidad para un solo viajero
+-Otorgan monedas o bonos que luego se calcula su equivalencia en puntos
+-Tienen capacidad para un solo viajero
 
-El bono por pasar por AguasTermales es igual a la cantidad de de visitas a AguasTermales (si esta es par)
-dividido 2, si la cant de visitas es 1 se da 0 bonos, si la cant de 
-visitas es impar se da bonos= a la (cant de visitas menos 1) dividido 2 
+El bono por pasar por AguasTermales:
+-Si la cantidad de visitas es par la cantidad de bonos es igual a la cantidad de de visitas a AguasTermales dividido 2.
+-Si la cant de visitas es 1 no se otorgan bonos. 
+-Si la cantidad de visitas es impar la cantidad de bonos será igual a la cantidad de visitas menos 1 y luego dividido 2. 
 
-Cada vez que se visita una granja se le suma una cantidad de monedas 
-que corresponde a multiplicar la cantidad de visitas a una granja por 2.
+Cada vez que se visita una granja se le suma una cantidad de monedas que corresponde a multiplicar la cantidad de visitas a una granja, por 2.
 
-Los viajeros se mueven a una posicion dada randómicamente entre las siguientes 7 experiencias.
+Los viajeros se mueven a una posicion dada randómicamente.
+
+Cuando dos viajeros se encuentran en la última posición se mueve el primero que encuentra el programa, sin importar cuál llegó en primer lugar, luego se va a mover el que queda dado es el que sigue en la última posición. 
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------

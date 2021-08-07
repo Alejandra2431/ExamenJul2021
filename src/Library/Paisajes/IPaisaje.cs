@@ -8,9 +8,9 @@ namespace Library
         /* 
             En esta interfaz para cumplir con el principio OCP (Open-Closed Principle), así se puede extender el código a traves de
             la implementación de la interfaz ICard, en el caso de que se quieran agregar más paisajes.
-            Se cumple con el principio LSP (Liskov Substitution Principle) porque al ser una interfaz pequeña se evita que las clases
+            Se cumple con el principio ISP (Interface Segregation Principle) porque al ser una interfaz pequeña se evita que las clases
             dependen de la interfaz tengan que implementar algo que no utilizan.
-            Tambien se cumple el principio DIP (Dependency Inversion Principle) para depender de una abstracción y no de una clase directamente. 
+            También se cumple el principio DIP (Dependency Inversion Principle) para depender de una abstracción y no de una clase directamente. 
         */
         /// <summary>
         /// Representa la operacion necesaria para clacular las monedas que le corresponde adquirir

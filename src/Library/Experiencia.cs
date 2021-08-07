@@ -12,6 +12,11 @@ namespace Library
 
         Permite aplicar el principio DIP (Dependency inversion principle) debido a que es una abstraccion
         y las experiencias van a depender de ella y no de una clase directamente.
+
+        También cumple con el patrón Chain of Responsibility, a cada objeto de la clase Experiencia se le asocia otro objeto de la misma clase
+        que es una experiencia siguiente. Cada experiencia tiene su propio método para agregar viajeros, y cuando una está llena le delega
+        a la siguiente que lo agregue. Cada experiencia recive una solicitud y decide si la procesa o si la pasa al siguiente manejador
+        de la cadena.
     */
     /// <summary>
     /// Representa la abstraccion de una experiencia
@@ -85,11 +90,5 @@ namespace Library
         /// </summary>
         /// <param name="viajero"></param>
         public abstract void ActualizarViajero(Viajero viajero);
-
-        
-        
-        //cuando es una experiencia con dos lugares el que llega primero va a la
-        //posicion 0, y el siguiente a la 1 => se son los últimos 2, se mueve el
-        //de la posicion 0
     }
 }

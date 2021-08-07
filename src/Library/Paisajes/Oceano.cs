@@ -3,6 +3,7 @@ namespace Library
 {
     /*
         Se aplica el patron expert en esta clase ya que es la experta en los datos de los océanos y en cómo hacer los cálculos de ellos.
+        Además cumple con SRP porque su única responsabilidad es saber cómo resolverse a sí misma.
     */
     /// <summary>
     /// Oceano representa la experiencia-paisaje Oceano

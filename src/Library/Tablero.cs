@@ -5,7 +5,7 @@ namespace Library
     /*
       La clase Tablero es experta en conocer la informacion necesaria para llevar a cabo el juego, conoce tanto a 
       la experiencia Comienzo como a Viajero, esenciales para completar sus responsabilidades. Por eso cumple con el patron Expert.
-
+      La clase Tablero va a crear la lista de viajeros de tipo Viajero que jugarán, así aplica el patron Creator.
     */
     /// <summary>
     /// Tablero representa el camino/tablero. 
@@ -14,7 +14,6 @@ namespace Library
     /// </summary>
     public class Tablero
     {
-      /// Instancia unica del Singleton Comienzo
       /// <summary>
       /// Primera experiencia del juego
       /// </summary>
@@ -40,7 +39,7 @@ namespace Library
         int moverAPosicion = rand.Next(1, 7) + viajero.posicionEnCamino;
         Experiencia experienciaActual = comienzo;
         while (experienciaActual != null)
-        {  //busca en el tablero
+        {   //busca en el tablero
             if (experienciaActual.posicionEnCamino == moverAPosicion)
             {
                 experienciaActual.AgregarViajero(viajero);
@@ -67,7 +66,7 @@ namespace Library
       /// </summary>
       /// <param name="viajeros"></param>
       /// <param name="comienzo"></param>
-      private void AgregarViajerosAlComienzo(List<Viajero> viajeros, Comienzo comienzo)
+      public void AgregarViajerosAlComienzo(List<Viajero> viajeros, Comienzo comienzo)
       {
         if (comienzo != null)
         {

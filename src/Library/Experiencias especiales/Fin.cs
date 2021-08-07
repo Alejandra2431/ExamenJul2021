@@ -2,7 +2,8 @@ using System.Collections.Generic;
 namespace Library
 {
     /*
-        Se aplica el patron Singleton ya que se crea una única vez la instancia de Comienzo. 
+        Fin cumple con SRP porque su única responsabilidad es encargarse de la resolución del juego.
+        También cumple con el patrón Expert porque sabe todo lo necesario para realizar su tarea.   
     */
     /// <summary>
     /// Representa la última experiencia del juego

@@ -1,8 +1,9 @@
 namespace Library
 {
     /*
-        Se aplica el patron expert en esta clase ya que es la experta en los datos de las aguas termales y en cómo hacer los cálculos de ellas.
-
+        Se aplica el patron expert en esta clase ya que es la experta en los datos de las aguas termales y 
+        en cómo hacer los cálculos de ellas.
+        Además cumple con SRP porque su única responsabilidad es saber cómo resolverse a sí misma.
     */
     /// <summary>
     /// AguasTermales representa la experiencia- no paisaje: AguasTermales

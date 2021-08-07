@@ -2,7 +2,9 @@ using System.Collections.Generic;
 namespace Library
 {
     /*
-        Se aplica el patron Singleton ya que se crea una única vez la instancia de Comienzo. 
+        Comienzo cumple con SRP porque su única responsabilidad es encargarse de la inicio del juego.
+        También cumple con el patrón Expert porque sabe todo lo necesario para realizar su tarea. 
+        Esta es clase es complemento de Tablero.
     */
     /// <summary>
     /// Representa la primera experiencia del juego

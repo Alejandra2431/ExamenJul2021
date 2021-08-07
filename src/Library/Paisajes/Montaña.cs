@@ -2,7 +2,8 @@ using System.Collections.Generic;
 namespace Library
 {
     /*
-        Se aplica el patron expert en esta clase ya que es la experta en los datos de los océanos y en cómo hacer los cálculos de ellos.
+        Se aplica el patron expert en esta clase ya que es la experta en los datos de las montañas y en cómo hacer los cálculos de ellas.
+        Además cumple con SRP porque su única responsabilidad es saber cómo resolverse a sí misma.
     */
     /// <summary>
     /// Montaña representa la experiencia-paisaje Montaña

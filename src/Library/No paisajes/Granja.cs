@@ -2,7 +2,7 @@ namespace Library
 {
     /*
         Se aplica el patron expert en esta clase ya que es la experta en los datos de las granjas y cómo hacer los cálculos de ellas.
-        
+        Además cumple con SRP porque su única responsabilidad es saber cómo resolverse a sí misma.
     */
     /// <summary>
     /// Granja representa la experiencia- no paisaje: Granja
