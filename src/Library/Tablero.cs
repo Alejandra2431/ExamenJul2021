@@ -19,6 +19,11 @@ namespace Library
       /// </summary>
       private Comienzo comienzo;
       /// <summary>
+      /// Viajero ganador
+      /// </summary>
+      /// <value>Viajero<Viajero></value>
+      public Viajero ganador;
+      /// <summary>
       /// Lista de viajeros
       /// </summary>
       /// <value>List<Viajero></value>
@@ -28,6 +33,7 @@ namespace Library
           this.viajeros= viajeros;
           this.comienzo= comienzoDelJuego;
           this.AgregarViajerosAlComienzo(viajeros, comienzoDelJuego);
+          this.ganador= new Viajero();
         }
       private Random rand = new Random();
       /// <summary>
@@ -141,6 +147,18 @@ namespace Library
           }
         }
         return juegoFinalizado;
+      }
+      public Viajero Ganador(List<Viajero> viajeros)
+      {
+        ganador= viajeros[0];
+        foreach (Viajero viajero in viajeros)
+        {
+          if (viajero.puntosDelViajero> ganador.puntosDelViajero)
+          {
+            ganador= viajero;
+          }
+        }
+        return ganador;
       }
     }
 }
